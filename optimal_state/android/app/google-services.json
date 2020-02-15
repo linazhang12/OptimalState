@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "194440993734",
+    "firebase_url": "https://optistate-43111.firebaseio.com",
+    "project_id": "optistate-43111",
+    "storage_bucket": "optistate-43111.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:194440993734:android:3ba5880009eeae523e70c7",
+        "android_client_info": {
+          "package_name": "com.example.optimal_state"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "194440993734-assb89cgfdlvf4u6jgktipjb8iht68bo.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBZ7rsKfgIQ-NBHQYo9TvXasU7-Alg-OS8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "194440993734-assb89cgfdlvf4u6jgktipjb8iht68bo.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "194440993734-r6vja4bojahfji2qasg3i4lceau66u5t.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.optimalState"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

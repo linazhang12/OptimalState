@@ -7,24 +7,26 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-
-import 'package:optimal_state/main.dart';
+import 'package:optimal_state/login_page.dart';
 
 void main() {
-  testWidgets('Counter increments smoke test', (WidgetTester tester) async {
-    // Build our app and trigger a frame.
-    await tester.pumpWidget(MyApp());
+  Widget makeTestableWidget({Widget child}) {
+    return MaterialApp(
+      home: child,
+    );
+  }
 
-    // Verify that our counter starts at 0.
-    expect(find.text('0'), findsOneWidget);
-    expect(find.text('1'), findsNothing);
+  testWidgets('Login screen test', (WidgetTester tester) async {
+    LoginPage loginScreen = LoginPage();
 
-    // Tap the '+' icon and trigger a frame.
-    await tester.tap(find.byIcon(Icons.add));
-    await tester.pump();
+    await tester.pumpWidget(makeTestableWidget(child: loginScreen));
 
-    // Verify that our counter has incremented.
-    expect(find.text('0'), findsNothing);
-    expect(find.text('1'), findsOneWidget);
+    expect(find.byType(FlutterLogo), findsOneWidget);
+    expect(find.byType(OutlineButton), findsOneWidget);
+    expect(find.text('Sign in with Google'), findsOneWidget);
+
+    print('Found Flutter logo.');
+    print('Button found.');
+    print('Found the login button text.');
   });
 }
