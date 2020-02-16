@@ -318,12 +318,146 @@ class _Dashboard extends State<Dashboard> {
                       ],
                     )
                   ],
+                ),
+                Padding(
+                  padding: EdgeInsets.only(top: 10),
+                ),
+                Row(
+                  children: <Widget>[
+                    Text("55% Increase in physcial activities", style: TextStyle(color: Colors.grey,),),
+                  ],
+                ),
+                Container(
+                  height: 250,
+                  padding: EdgeInsets.fromLTRB(0, 15, 0, 15),
+                  child: ListView(
+                    physics: ClampingScrollPhysics(),
+                    shrinkWrap: true,
+                    scrollDirection: Axis.horizontal,
+                    children: <Widget>[
+                      StatCard(
+                        title: 'Carbs Consumed',
+                        achieved: 25,
+                        total: 100,
+                        color: Colors.orange,
+                        image: Image.asset('assets/running.png', width: 20),
+                      ),
+                      StatCard(
+                        title: 'Weight Loss',
+                        achieved: 180,
+                        total: 200,
+                        color: Theme.of(context).primaryColor,
+                        image: Image.asset('assets/hiking.png', width: 20),
+                      ),
+                      StatCard(
+                        title: 'Time Outside',
+                        achieved: 100,
+                        total: 200,
+                        color: Colors.green,
+                        image: Image.asset('assets/soccer.png', width: 20),
+                      ),
+                    ],
+                  ),
                 )
               ],
             ),
-          )
+          ),
 
-        )
+        ),
+      ),
+    );
+  }
+}
+
+class StatCard extends StatelessWidget {
+  final String title;
+  final double total;
+  final double achieved;
+  final Image image;
+  final Color color;
+
+  const StatCard({
+    Key key,
+    @required this.title,
+    @required this.total,
+    @required this.achieved,
+    @required this.image,
+    @required this.color,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      width: 200,
+      margin: EdgeInsets.only(right: 10),
+      padding: EdgeInsets.fromLTRB(15, 5, 15, 5),
+      decoration: BoxDecoration(
+        color: Colors.white,
+        border: Border.all(
+          color: Colors.grey[200],
+          width: 1,
+        ),
+        borderRadius: BorderRadius.circular(5),
+      ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: <Widget>[
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: <Widget>[
+              Text(
+                title.toUpperCase(),
+                style: TextStyle(
+                  color: Theme.of(context).accentColor.withAlpha(100),
+                  fontSize: 14,
+                ),
+              ),
+              achieved < total
+                  ? Image.asset(
+                      'assets/running.png',
+                      width: 20,
+                    )
+                  : Image.asset(
+                      'assets/hiking.png',
+                      width: 20,
+                    ),
+            ],
+          ),
+          Padding(
+            padding: EdgeInsets.only(top: 25),
+          ),
+          CircularPercentIndicator(
+            radius: 80.0,
+            lineWidth: 8.0,
+            percent: achieved / (total < achieved ? achieved : total),
+            circularStrokeCap: CircularStrokeCap.round,
+            center: image,
+            progressColor: color,
+            backgroundColor: Theme.of(context).accentColor.withAlpha(30),
+          ),
+          Padding(
+            padding: EdgeInsets.only(top: 25),
+          ),
+          RichText(
+            text: TextSpan(children: [
+              TextSpan(
+                text: achieved.toString(),
+                style: TextStyle(
+                  fontSize: 20,
+                  color: Theme.of(context).accentColor,
+                ),
+              ),
+              TextSpan(
+                text: ' / $total',
+                style: TextStyle(
+                  color: Colors.grey,
+                  fontWeight: FontWeight.bold,
+                  fontSize: 12,
+                ),
+              ),
+            ]),
+          )
+        ],
       ),
     );
   }
