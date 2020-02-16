@@ -11,7 +11,7 @@ class FirstScreen extends StatelessWidget {
           gradient: LinearGradient(
             begin: Alignment.topRight,
             end: Alignment.bottomLeft,
-            colors: [Colors.blue[100], Colors.blue[400]],
+            colors: [Colors.yellowAccent[100], Colors.orange[100]],
           ),
         ),
         child: Center(
@@ -28,7 +28,7 @@ class FirstScreen extends StatelessWidget {
               ),
               SizedBox(height: 40),
               Text(
-                'NAME',
+                'WELCOME BACK',
                 style: TextStyle(
                     fontSize: 15,
                     fontWeight: FontWeight.bold,
@@ -38,17 +38,17 @@ class FirstScreen extends StatelessWidget {
                 name,
                 style: TextStyle(
                     fontSize: 25,
-                    color: Colors.deepPurple,
+                    color: Colors.teal[700],
                     fontWeight: FontWeight.bold),
               ),
-              SizedBox(height: 20),
+/*               SizedBox(height: 20),
               Text(
                 'EMAIL',
                 style: TextStyle(
                     fontSize: 15,
                     fontWeight: FontWeight.bold,
                     color: Colors.black54),
-              ),
+              ), 
               Text(
                 email,
                 style: TextStyle(
@@ -56,13 +56,15 @@ class FirstScreen extends StatelessWidget {
                     color: Colors.deepPurple,
                     fontWeight: FontWeight.bold),
               ),
+              */
               SizedBox(height: 40),
+              
               RaisedButton(
                 onPressed: () {
                   signOutGoogle();
                   Navigator.of(context).pushAndRemoveUntil(MaterialPageRoute(builder: (context) {return LoginPage();}), ModalRoute.withName('/'));
                 },
-                color: Colors.deepPurple,
+                color: Colors.teal[700],
                 child: Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Text(
@@ -70,9 +72,8 @@ class FirstScreen extends StatelessWidget {
                     style: TextStyle(fontSize: 25, color: Colors.white),
                   ),
                 ),
-                elevation: 5,
                 shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(40)),
+                    borderRadius: BorderRadius.circular(10)),
               )
             ],
           ),
