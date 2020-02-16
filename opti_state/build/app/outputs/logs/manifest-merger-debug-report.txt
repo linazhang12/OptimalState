@@ -7,6 +7,7 @@ INJECTED from /Users/linazhang/Desktop/OptimalState/opti_state/android/app/src/m
 MERGED from /Users/linazhang/Desktop/OptimalState/opti_state/android/app/src/main/AndroidManifest.xml:1:1-47:12
 MERGED from [:firebase_auth] /Users/linazhang/Desktop/OptimalState/opti_state/build/firebase_auth/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-15:12
 MERGED from [:cloud_firestore] /Users/linazhang/Desktop/OptimalState/opti_state/build/cloud_firestore/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-15:12
+MERGED from [:cloud_firestore_web] /Users/linazhang/Desktop/OptimalState/opti_state/build/cloud_firestore_web/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-7:12
 MERGED from [:firebase_core] /Users/linazhang/Desktop/OptimalState/opti_state/build/firebase_core/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-15:12
 MERGED from [:firebase_core_web] /Users/linazhang/Desktop/OptimalState/opti_state/build/firebase_core_web/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-7:12
 MERGED from [:google_sign_in] /Users/linazhang/Desktop/OptimalState/opti_state/build/google_sign_in/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-9:12
@@ -186,6 +187,8 @@ MERGED from [:firebase_auth] /Users/linazhang/Desktop/OptimalState/opti_state/bu
 MERGED from [:firebase_auth] /Users/linazhang/Desktop/OptimalState/opti_state/build/firebase_auth/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
 MERGED from [:cloud_firestore] /Users/linazhang/Desktop/OptimalState/opti_state/build/cloud_firestore/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
 MERGED from [:cloud_firestore] /Users/linazhang/Desktop/OptimalState/opti_state/build/cloud_firestore/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:cloud_firestore_web] /Users/linazhang/Desktop/OptimalState/opti_state/build/cloud_firestore_web/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:cloud_firestore_web] /Users/linazhang/Desktop/OptimalState/opti_state/build/cloud_firestore_web/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
 MERGED from [:firebase_core] /Users/linazhang/Desktop/OptimalState/opti_state/build/firebase_core/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
 MERGED from [:firebase_core] /Users/linazhang/Desktop/OptimalState/opti_state/build/firebase_core/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
 MERGED from [:firebase_core_web] /Users/linazhang/Desktop/OptimalState/opti_state/build/firebase_core_web/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
