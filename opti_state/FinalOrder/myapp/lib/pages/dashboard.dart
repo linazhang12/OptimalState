@@ -15,7 +15,7 @@ class _Dashboard extends State<Dashboard> {
       appBar: AppBar(
         elevation: 0,
         titleSpacing: 10,
-        backgroundColor: Colors.white,
+        backgroundColor: Colors.red,
         title: Row(
           mainAxisAlignment: MainAxisAlignment.start,
           children: <Widget>[
@@ -34,12 +34,12 @@ class _Dashboard extends State<Dashboard> {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: <Widget>[
                 Text("Tofu Chan", style: TextStyle(
-                    color: Colors.grey,
+                    color: Colors.white,
                     fontSize: 16,
                   ),
                 ),
                 Text("Feb 16, 2020", style: TextStyle(
-                    color: Colors.grey,
+                    color: Colors.white,
                     fontSize: 12,
                   ),
                 ),
@@ -55,7 +55,7 @@ class _Dashboard extends State<Dashboard> {
               children: <Widget>[
                 Container(
                   width: 50,
-                  child: Icon(Icons.notifications, color: Theme.of(context).primaryColor,
+                  child: Icon(Icons.notifications, color: Colors.white,
                   size: 35,
                   ),
                 ),
@@ -67,7 +67,7 @@ class _Dashboard extends State<Dashboard> {
                   child: Container(
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(25),
-                      color: Colors.grey[200],
+                      color: Colors.grey[400],
                     ),
                     width: 20,
                     height: 20,
@@ -309,7 +309,7 @@ class _Dashboard extends State<Dashboard> {
                     Row(
                       children: <Widget>[
                         Image.asset(
-                          "assets/heart.png",
+                          "assets/smiley.png",
                           width: 40,
                         ),
                         Padding(
@@ -364,6 +364,31 @@ class _Dashboard extends State<Dashboard> {
           ),
 
         ),
+      ),
+      
+ bottomNavigationBar: BottomNavigationBar(
+      items: const <BottomNavigationBarItem>[
+        BottomNavigationBarItem(
+          icon: Icon(Icons.home),
+          title: Text('Home'),
+        ),
+        BottomNavigationBarItem(
+          icon: Icon(Icons.list),
+          title: Text('Activities'),
+        ),
+        BottomNavigationBarItem(
+          icon: Icon(Icons.cloud_circle),
+          title: Text('Location'),
+        ),
+        ],
+      ),
+
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+        // Add your onPressed code here!
+        },
+        child: Icon(Icons.add),
+        backgroundColor: Colors.red
       ),
     );
   }
