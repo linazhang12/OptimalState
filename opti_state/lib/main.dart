@@ -12,6 +12,7 @@ class MyApp extends StatelessWidget {
       title: 'Opti State',
       theme: ThemeData(
         primarySwatch: Colors.blue,
+        primaryColor: Colors.red,
       ),
       home: LoginPage(),
     );
